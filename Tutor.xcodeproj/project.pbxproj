@@ -6,6 +6,16 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		06DC2A0D2FB9317D00A51D60 /* MLXHuggingFace in Frameworks */ = {isa = PBXBuildFile; productRef = 06DC2A0C2FB9317D00A51D60 /* MLXHuggingFace */; };
+		06DC2A0F2FB9317D00A51D60 /* MLXLLM in Frameworks */ = {isa = PBXBuildFile; productRef = 06DC2A0E2FB9317D00A51D60 /* MLXLLM */; };
+		06DC2A112FB9317D00A51D60 /* MLXLMCommon in Frameworks */ = {isa = PBXBuildFile; productRef = 06DC2A102FB9317D00A51D60 /* MLXLMCommon */; };
+		06DC2A1E2FB9345E00A51D60 /* HuggingFace in Frameworks */ = {isa = PBXBuildFile; productRef = 06DC2A1D2FB9345E00A51D60 /* HuggingFace */; };
+		06DC2A212FB934A900A51D60 /* Hub in Frameworks */ = {isa = PBXBuildFile; productRef = 06DC2A202FB934A900A51D60 /* Hub */; };
+		06DC2A232FB934A900A51D60 /* Tokenizers in Frameworks */ = {isa = PBXBuildFile; productRef = 06DC2A222FB934A900A51D60 /* Tokenizers */; };
+		06DC2A252FB934A900A51D60 /* Transformers in Frameworks */ = {isa = PBXBuildFile; productRef = 06DC2A242FB934A900A51D60 /* Transformers */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		06DC29EF2FB930D800A51D60 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +62,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06DC2A252FB934A900A51D60 /* Transformers in Frameworks */,
+				06DC2A0F2FB9317D00A51D60 /* MLXLLM in Frameworks */,
+				06DC2A212FB934A900A51D60 /* Hub in Frameworks */,
+				06DC2A232FB934A900A51D60 /* Tokenizers in Frameworks */,
+				06DC2A112FB9317D00A51D60 /* MLXLMCommon in Frameworks */,
+				06DC2A0D2FB9317D00A51D60 /* MLXHuggingFace in Frameworks */,
+				06DC2A1E2FB9345E00A51D60 /* HuggingFace in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +129,13 @@
 			);
 			name = Tutor;
 			packageProductDependencies = (
+				06DC2A0C2FB9317D00A51D60 /* MLXHuggingFace */,
+				06DC2A0E2FB9317D00A51D60 /* MLXLLM */,
+				06DC2A102FB9317D00A51D60 /* MLXLMCommon */,
+				06DC2A1D2FB9345E00A51D60 /* HuggingFace */,
+				06DC2A202FB934A900A51D60 /* Hub */,
+				06DC2A222FB934A900A51D60 /* Tokenizers */,
+				06DC2A242FB934A900A51D60 /* Transformers */,
 			);
 			productName = Tutor;
 			productReference = 06DC29E12FB930D400A51D60 /* Tutor.app */;
@@ -195,6 +219,11 @@
 			);
 			mainGroup = 06DC29D82FB930D400A51D60;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				06DC2A0B2FB9317D00A51D60 /* XCRemoteSwiftPackageReference "mlx-swift-lm" */,
+				06DC2A1C2FB9345E00A51D60 /* XCRemoteSwiftPackageReference "swift-huggingface" */,
+				06DC2A1F2FB934A900A51D60 /* XCRemoteSwiftPackageReference "swift-transformers" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 06DC29E22FB930D400A51D60 /* Products */;
 			projectDirPath = "";
@@ -395,24 +424,45 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P2B8GBB5KP;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.marthaheredia.Tutor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -427,24 +477,45 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P2B8GBB5KP;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.marthaheredia.Tutor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -578,6 +649,75 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		06DC2A0B2FB9317D00A51D60 /* XCRemoteSwiftPackageReference "mlx-swift-lm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ml-explore/mlx-swift-lm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.31.3;
+			};
+		};
+		06DC2A1C2FB9345E00A51D60 /* XCRemoteSwiftPackageReference "swift-huggingface" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huggingface/swift-huggingface";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+			traits = (
+			);
+		};
+		06DC2A1F2FB934A900A51D60 /* XCRemoteSwiftPackageReference "swift-transformers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huggingface/swift-transformers";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.3;
+			};
+			traits = (
+			);
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		06DC2A0C2FB9317D00A51D60 /* MLXHuggingFace */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06DC2A0B2FB9317D00A51D60 /* XCRemoteSwiftPackageReference "mlx-swift-lm" */;
+			productName = MLXHuggingFace;
+		};
+		06DC2A0E2FB9317D00A51D60 /* MLXLLM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06DC2A0B2FB9317D00A51D60 /* XCRemoteSwiftPackageReference "mlx-swift-lm" */;
+			productName = MLXLLM;
+		};
+		06DC2A102FB9317D00A51D60 /* MLXLMCommon */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06DC2A0B2FB9317D00A51D60 /* XCRemoteSwiftPackageReference "mlx-swift-lm" */;
+			productName = MLXLMCommon;
+		};
+		06DC2A1D2FB9345E00A51D60 /* HuggingFace */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06DC2A1C2FB9345E00A51D60 /* XCRemoteSwiftPackageReference "swift-huggingface" */;
+			productName = HuggingFace;
+		};
+		06DC2A202FB934A900A51D60 /* Hub */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06DC2A1F2FB934A900A51D60 /* XCRemoteSwiftPackageReference "swift-transformers" */;
+			productName = Hub;
+		};
+		06DC2A222FB934A900A51D60 /* Tokenizers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06DC2A1F2FB934A900A51D60 /* XCRemoteSwiftPackageReference "swift-transformers" */;
+			productName = Tokenizers;
+		};
+		06DC2A242FB934A900A51D60 /* Transformers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 06DC2A1F2FB934A900A51D60 /* XCRemoteSwiftPackageReference "swift-transformers" */;
+			productName = Transformers;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 06DC29D92FB930D400A51D60 /* Project object */;
 }

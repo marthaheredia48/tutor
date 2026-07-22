@@ -9,9 +9,24 @@ import SwiftUI
 
 @main
 struct TutorApp: App {
+    private let modoTaller: ModoTaller = .demo
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            switch modoTaller {
+            case .enVivo:
+                VistaEnVivo()
+            case .demo:
+                VistaDemo()
+            }
         }
+        #if os(macOS)
+        .windowResizability(.contentSize)
+        #endif
     }
+}
+
+enum ModoTaller {
+    case enVivo
+    case demo
 }
